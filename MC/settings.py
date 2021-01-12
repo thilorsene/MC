@@ -81,11 +81,11 @@ WSGI_APPLICATION = 'MC.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'restau',
-        'USER':'root',
-        'PASSWORD':'',
-        'PORT': 3308,
-        'HOST': 'localhost'
+        'NAME': 'oirmdr9ceyzzqc0t',
+        'USER':'dea1lweec3djlpq5',
+        'PASSWORD':'xjr80olq037qpir4',
+        'PORT': 3306,
+        'HOST': 'r6ze0q02l4me77k3.chr7pe7iynqr.eu-west-1.rds.amazonaws.com'
     }
 }
 
