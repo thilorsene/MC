@@ -48,7 +48,8 @@
               <i class="align-middle" data-feather="briefcase"></i> <span class="align-middle">Données</span>
             </a>
 						<ul id="ui" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
-							<li class="sidebar-item"><a class="sidebar-link" href="ui-alerts.html">Telecharger</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href={% url 'telechargement' %}>Rapport Global</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href={% url 'rapport' %}>Rapport Journalier</a></li>
 					</ul>
 					</li>
 
@@ -62,6 +63,8 @@
 				<a class="sidebar-toggle d-flex">
           <i class="hamburger align-self-center"></i>
         </a>
+		{% block title %}
+		{% endblock title %}
 				
 				<div class="navbar-collapse collapse">
 					<ul class="navbar-nav navbar-align">
@@ -88,22 +91,22 @@
 					<div class="row text-muted">
 						<div class="col-6 text-left">
 							<p class="mb-0">
-								<a href="index.html" class="text-muted"><strong>AdminKit Demo</strong></a> &copy;
+								<a href="index.html" class="text-muted"><strong> M1 SIGLIS 2020/2021</strong></a> &copy;
 							</p>
 						</div>
 						<div class="col-6 text-right">
 							<ul class="list-inline">
 								<li class="list-inline-item">
-									<a class="text-muted" href="#">Support</a>
+									<a class="text-muted" href="#"></a>
 								</li>
 								<li class="list-inline-item">
-									<a class="text-muted" href="#">Help Center</a>
+									<a class="text-muted" href="#"></a>
 								</li>
 								<li class="list-inline-item">
-									<a class="text-muted" href="#">Privacy</a>
+									<a class="text-muted" href="#"></a>
 								</li>
 								<li class="list-inline-item">
-									<a class="text-muted" href="#">Terms</a>
+									<a class="text-muted" href="#"></a>
 								</li>
 							</ul>
 						</div>
@@ -209,50 +212,6 @@
 						display: false
 					},
 					cutoutPercentage: 75
-				}
-			});
-		});
-	</script>
-	<script>
-		document.addEventListener("DOMContentLoaded", function() {
-			// Bar chart
-			new Chart(document.getElementById("chartjs-dashboard-bar"), {
-				type: "bar",
-				data: {
-					labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-					datasets: [{
-						label: "This year",
-						backgroundColor: window.theme.primary,
-						borderColor: window.theme.primary,
-						hoverBackgroundColor: window.theme.primary,
-						hoverBorderColor: window.theme.primary,
-						data: [54, 67, 41, 55, 62, 45, 55, 73, 60, 76, 48, 79],
-						barPercentage: .75,
-						categoryPercentage: .5
-					}]
-				},
-				options: {
-					maintainAspectRatio: false,
-					legend: {
-						display: false
-					},
-					scales: {
-						yAxes: [{
-							gridLines: {
-								display: false
-							},
-							stacked: false,
-							ticks: {
-								stepSize: 20
-							}
-						}],
-						xAxes: [{
-							stacked: false,
-							gridLines: {
-								color: "transparent"
-							}
-						}]
-					}
 				}
 			});
 		});
